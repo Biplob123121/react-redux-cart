@@ -1,6 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
+import Carts from './components/Carts';
+import CartDetails from './components/CartDetails';
+
 
 function App() {
   return (
@@ -8,7 +11,8 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path='/' ></Route>
+          <Route path='/' element={<Carts />}></Route>
+          <Route path='/cart' element={<CartDetails />}></Route>
         </Routes>
 
       </BrowserRouter>
